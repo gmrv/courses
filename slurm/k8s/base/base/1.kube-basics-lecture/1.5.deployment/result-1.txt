@@ -1,0 +1,1 @@
+ReplicaSet "my-deployment-58c4f5f5b" has successfully progressed.
