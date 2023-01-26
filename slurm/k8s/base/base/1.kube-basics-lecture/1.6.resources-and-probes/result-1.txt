@@ -1,0 +1,3 @@
+
+my-deployment-75c765db89-dvfjj	Initialized=True	Ready=True	ContainersReady=True	PodScheduled=True
+my-deployment-75c765db89-x574f	Initialized=True	Ready=True	ContainersReady=True	PodScheduled=True

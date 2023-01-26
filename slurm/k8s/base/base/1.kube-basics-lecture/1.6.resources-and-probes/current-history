@@ -1,0 +1,61 @@
+docker ps
+ls -la
+cd ln -s /mnt/c/Users/v2360/Projects-Pet/courses/ courses
+ln -s /mnt/c/Users/v2360/Projects-Pet/courses/ courses
+ls -la
+rm -rf base
+cd courses
+cd slurm/k8s/base/base/
+git pull
+cd 1.kube-basics-lecture/1.6.resources-and-probes/
+ls -la
+echo $PS1
+nano ~/.bashrc
+source ~/.bashrc 
+pss
+ppl
+psl
+pss
+nano ~/.bashrc
+source ~/.bashrc 
+pss
+nano deployment-with-stuff.yaml 
+kubectl apply -f deployment-with-stuff.yaml 
+kubectl get po -w
+kubectl describe deployments.apps my-deployment 
+cp deployment-with-stuff.yaml deployment-with-stuff-my.yaml 
+git status
+git restore deployment-with-stuff
+ls -la
+git restore deployment-with-stuff.yaml
+git status
+nano deployment-with-stuff-my.yaml 
+kubectl describe po my-deployment-676ccb8d54-brz99 
+kubectl describe po my-deployment-676ccb8d54-brz99 -o json
+kubectl describe po my-deployment-676ccb8d54-brz99 -o wide
+kubectl describe po my-deployment-676ccb8d54-brz99 --o wide
+kubectl describe --help
+kubectl get po my-deployment-676ccb8d54-brz99 
+kubectl get po my-deployment-676ccb8d54-brz99 -o json
+kubectl get po my-deployment-676ccb8d54-brz99 -o jsonpath '{.status.qosClass}'
+kubectl get po my-deployment-676ccb8d54-brz99 -o jsonpath '{.status}'
+kubectl get po my-deployment-676ccb8d54-brz99 -o jsonpath='{.status}'
+kubectl get po my-deployment-676ccb8d54-brz99 -o jsonpath='{.status.qosPath}'
+kubectl get po my-deployment-676ccb8d54-brz99 -o jsonpath='{.status.qosClass}'
+kubectl get po -o jsonpath='{range .items[*]}{"\n"}{@.metadata.name}{range
+@.status.conditions[*]}{"\t"}{@.type}={@.status}{end}{end}{"\n"}'
+kubectl get po -o jsonpath='{range .items[*]}{"\n"}{@.metadata.name}{range@.status.conditions[*]}{"\t"}{@.type}={@.status}{end}{end}{"\n"}'
+kubectl get po -o json
+nano deployment-with-stuff-my.yaml 
+kubectl apply -f deployment-with-stuff-my.yaml 
+kubectl get po -o jsonpath='{range .items[*]}{"\n"}{@.metadata.name}{range@.status.conditions[*]}{"\t"}{@.type}={@.status}{end}{end}{"\n"}'
+kubectl get po -o jsonpath='{range .items[*]}{"\n"}{@.metadata.name}{range@.status.conditions[*]}{"\t"}{@.type}={@.status}{end}{end}{"\n"}' > result-1.txt
+cat result-1.txt 
+nano deployment-with-stuff-my.yaml 
+kubectl apply -f deployment-with-stuff-my.yaml 
+nano deployment-with-stuff-my.yaml 
+kubectl apply -f deployment-with-stuff-my.yaml 
+kubectl describe po my-deployment-959886fdc-bfdzm 
+nano result-2.txt 
+ls -la
+save-history 
