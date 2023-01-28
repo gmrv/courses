@@ -1,0 +1,44 @@
+ls -la
+ls -la courses/
+cd courses/
+git pull
+cd slurm/k8s/base/base/1.kube-basics-lecture/1.7.configmap/
+ls -la
+nano ~/.bashrc 
+source ~/.bashrc 
+docker ps
+source ~/.bashrc 
+pss
+nano ~/.bashrc 
+source ~/.bashrc 
+pss
+ls -la
+nano configmap.yaml 
+nano deployment-with-configmap.yaml 
+nano configmap.yaml 
+kubectl apply -f .
+k get po
+kubectl port-forward my-deployment-6dff9887cd-5shwr 8888:80
+nano configmap.yaml 
+kubectl get cm --all
+kubectl get cm -a
+kubectl get cm 
+kubectl edit cm my-configmap 
+kubectl port-forward my-deployment-6dff9887cd-5shwr 8888:80
+kubectl  edit cm my-configmap 
+kubectl port-forward my-deployment-6dff9887cd-5shwr 8888:80
+kubectl exec -it my-deployment-6dff9887cd-5shwr bash
+kubectl get all
+kubectl edit deployments.apps my-deployment 
+kubectl port-forward my-deployment-6dff9887cd-5shwr 8888:80
+kubectl port-forward my-deployment-7c9fb76ff5-hf7h7 8888:80
+kubectl port-forward my-deployment-7c9fb76ff5-hf7h7 8888:80 &
+curl http://localhost:8888
+nano result-1.txt
+jobs
+fg
+jobs
+git status
+kubectl delete -f .
+kubectl get all
+save-history 
