@@ -1,0 +1,103 @@
+git status
+git add .
+git status
+git log --oneline
+git commit -m '1.8 - services'
+git push
+cd ../1.9.ingress/
+ls -la
+nano deployment.yaml 
+nano configmap.yaml 
+kubectl apply -f .
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f .
+k get all -A
+ls -la
+nano ingress.yaml 
+kubectl apply -f .
+nano ingress.yaml 
+kubectl apply -f .
+nano ingress.yaml 
+k get all
+kubectl create ingress demo-localhost --class=nginx   --rule="demo.localdev.me/*=demo:80"
+k get all
+k get all -A
+kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/cloud/deploy.yaml
+k get all -A
+kubectl get pods --namespace=ingress-nginx
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml
+kubectl get pods --namespace=ingress-nginx
+kubectl get pods --namespace=ingress-nginx -w
+kubectl get pods --namespace=ingress-nginx
+kubectl get pods --namespace=ingress-nginx -w
+kubectl get pods --namespace=ingress-nginx
+kubectl wait --namespace ingress-nginx   --for=condition=ready pod   --selector=app.kubernetes.io/component=controller   --timeout=120s
+kubectl get pods --namespace=ingress-nginx -w
+k logs ingress-nginx-admission-create-8knnz
+k logs ingress-nginx-admission-create-8knnz -A
+k logs po ingress-nginx-admission-create-8knnz 
+k logs --namespace ingress-nginx ingress-nginx-admission-create-8knnz 
+kubectl get pods --namespace=ingress-nginx -w
+k logs --namespace ingress-nginx ingress-nginx-admission-create-8knnz 
+kubectl get pods --namespace=ingress-nginx -w
+kubectl create deployment demo --image=httpd --port=80
+kubectl expose deployment demo
+kubectl create ingress demo-localhost --class=nginx   --rule="demo.localdev.me/*=demo:80"
+kubectl create ingress demo-localhost1 --class=nginx   --rule="demo.localdev.me/*=demo:80"
+k get all
+k get all -A
+kubectl delete ingress demo-localhost --class=nginx  --rule="demo.localdev.me/*=demo:80"
+kubectl delete ingress demo-localhost
+kubectl create ingress demo-localhost1 --class=nginx --rule="demo.localdev.me/*=demo:80"
+kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
+k get all -A
+kubectl edit ingress demo-localhost
+kubectl get ingress -A
+kubectl edit ingress demo-localhost1
+kubectl delete ingress demo-localhost1
+k apply -f .
+kubectl create ingress demo-localhost --class=nginx --rule="demo.localdev.me/*=demo:80"
+kubectl edit ingress demo-localhost
+nano ingress.yaml 
+k apply -f .
+nano ingress.yaml 
+k apply -f .
+kubectl edit ingress demo-localhost
+nano ingress.yaml 
+k apply -f .
+nano ingress.yaml 
+k get all
+k delete po demo-75ddddf99c-845bv
+kubectl delete service demo 
+kubectl delete deployments.apps demo 
+k get all
+kubectl get ingress
+kubectl delete ingress demo-localhost 
+nano ingress.yaml 
+kubectl get ingress
+kubectl edit ingress my-ingress 
+kubectl delete ingress my-ingress 
+kubectl create ingress demo-localhost --class=nginx   --rule="demo.localdev.me/*=my-service:80"
+kubectl get ingress
+kubectl edit ingress my-ingress 
+kubectl edit ingress demo-localhost 
+kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 80:80
+kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
+kubectl edit ingress demo-localhost 
+nano ingress.yaml 
+k apply -f .
+k get ingress
+k delete ingress demo-localhost
+k apply -f .
+k get ingress
+kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
+nano readme.md
+ls -la
+mkdir ingress-nginx
+cd ingress-nginx/
+curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml-o deploy.yaml
+curl -o deploy.yaml https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml
+ls -la 
+nano deploy.yaml 
+cd ..
+save-history 
