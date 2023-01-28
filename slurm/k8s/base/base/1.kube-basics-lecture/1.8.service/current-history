@@ -1,0 +1,43 @@
+cd courses/slurm/k8s/base/base/1.kube-basics-lecture/1.8.service/
+pss
+ls -la
+git apply -f .
+kubectl apply -f .
+kubectl get all
+k get ep
+k get po -o wide
+kubectl run -it -rm --image centosadmin/utils bash
+kubectl run -it --rm --image centosadmin/utils bash
+kubectl run -it --rm --image centosadmin/utils test /bin/bash
+kubectl run -it --rm --image centosadmin/utils test "curl my-service" > result-1.txt
+ls -la
+rm -rf result-1.txt 
+kubectl run -it --rm --image centosadmin/utils test "curl my-service" 
+k delete pod test
+kubectl run -it --rm --image centosadmin/utils test "curl my-service" 
+k delete pod test
+kubectl run -it --image centosadmin/utils test "curl my-service" 
+k delete pod test
+kubectl run -it --image centosadmin/utils test curl my-service 
+k delete pod test
+kubectl run -t --image centosadmin/utils test curl my-service 
+kubectl run -i --image centosadmin/utils test curl my-service 
+kubectl run --image centosadmin/utils test ls 
+k delete pod test
+kubectl run --image centosadmin/utils test ls 
+k delete pod test
+kubectl run -i --image centosadmin/utils test ls 
+k delete pod test
+kubectl run --image centosadmin/utils test 
+kubectl exec -it test ls
+kubectl exec -it test -- ls
+kubectl exec -it test -- curl my-service
+kubectl exec -it test -- curl my-service > result-1.txt
+cat result-1.txt 
+kubectl image ls
+kubectl images ls
+k get po
+k delete pod test
+k delete -f .
+k get all
+save-history 
