@@ -1,0 +1,95 @@
+cd -
+cd courses/slurm/k8s/base/base/1.kube-basics-lecture/1.7
+cd courses/slurm/k8s/base/base/1.kube-basics-lecture/1.7.configmap/
+pss
+ls -la
+git status
+git pull
+kubectl create secret generic --from-literal username=sta-sys
+kubectl create secret generic --from-literal --help
+kubectl create secret generic --help
+kubectl create secret generic --from-literal=username=sta-sys
+kubectl create secret generic my-secret --from-literal=username=sta-sys
+kubectl get se
+kubectl get secrets 
+kubectl get secrets my-secret 
+kubectl describe secrets my-secret 
+ls -la
+cat configmap.yaml 
+nano configmap-hw.yaml 
+ls -la
+cp deployment-with-configmap.yaml deployment-hw.yaml 
+nano deployment-hw.yaml 
+nano configmap-hw.yaml 
+nano deployment-hw.yaml 
+mkdir hw
+mv *-hw.* hw
+ls -la
+cd hw
+ls -la
+nano deployment-hw.yaml 
+kubectl describe secrets my-secret 
+nano deployment-hw.yaml 
+nano configmap-hw.yaml 
+nano deployment-hw.yaml 
+kubectl create secret generic my-secret --from-literal=username=sta-sys
+nano deployment-hw.yaml 
+kubectl apply -f .
+nano configmap-hw.yaml 
+kubectl apply -f .
+nano deployment-hw.yaml 
+kubectl apply -f .
+nano deployment-hw.yaml 
+kubectl apply -f .
+nano deployment-hw.yaml 
+kubectl apply -f .
+nano deployment-hw.yaml 
+kubectl apply -f .
+kubectl get all
+kubectl describe po my-deployment-5f6ffd4945-wjqdw 
+kubectl logs my-deployment-5f6ffd4945-wjqdw 
+nano configmap-hw.yaml 
+kubectl apply -f .
+kubectl get all
+kubectl logs my-deployment-5f6ffd4945-wjqdw 
+kubectl get all
+kubectl get all -w
+kubectl get po -w
+kubectl get all
+kubectl port-forward my-deployment-5f6ffd4945-9vvpv 8888:80 &
+curl http://localhost:8888
+curl http://localhost:8888 -i -o result-2.txt
+cat result-2.txt 
+git status
+cd ..
+git add .
+git status
+git commit -m '1.7 - secret'
+git push
+git log
+git logq
+git config --global alias.change-commits '!'"f() { VAR=\$1; OLD=\$2; NEW=\$3; shift 3; git filter-branch --env-filter \"if [[ \\\"\$\`echo \$VAR\`\\\" = '\$OLD' ]]; then export \$VAR='\$NEW'; fi\" \$@; }; f"
+git change-commits GIT_AUTHOR_EMAIL "gmrv04@gmqil.com" "shamil.gumerov@gmail.com"
+
+git config --global user.name "Shamil Gumerov"
+git config --global user.email "shamil.gumerov@gmail.com"
+git change-commits GIT_AUTHOR_EMAIL "gmrv04@gmqil.com" "shamil.gumerov@gmail.com"
+git commit --amend --no-edit --reset-author
+git log
+git push -f
+git log --oneline
+git rebase -r 60f2c05 --exec 'git commit --amend --no-edit --reset-author'
+git log
+git rebase -r 95908671c98d0dce920e555e43a923500af9c3aa --exec 'git commit --amend --no-edit --reset-author'
+git log
+git push -f
+cd ..
+ls -la
+cd 1.8.service/
+ls -la
+cat *
+kubectl delete -f ../1.7.configmap/hw/*
+cd ../1.7.configmap/hw
+kubectl delete -f .
+kubectl get all
+save-history 

@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Server: openresty/1.13.6.2
+Date: Sat, 28 Jan 2023 21:21:35 GMT
+Content-Type: text/plain
+Content-Length: 52
+Connection: keep-alive
+
+Helo , sta-sys. I am my-deployment-5f6ffd4945-9vvpv

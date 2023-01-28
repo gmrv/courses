@@ -1,0 +1,27 @@
+---
+# file: practice/1.kube-basics-lecture/1.7.configmap/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap-hw
+data:
+  nginx.conf: |
+    worker_processes 1;
+    events {
+      worker_connections 1024;
+    }
+    env USERNAME;
+    http {
+      server {
+        listen       80 default_server;
+        server_name  _;
+
+        default_type text/plain;
+
+        set_by_lua $username 'return os.getenv("USERNAME")';
+        location / {
+          return 200 'Helo , $username. I am $hostname\n';
+        }
+      }
+    }
+...
