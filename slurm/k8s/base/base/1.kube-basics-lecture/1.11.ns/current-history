@@ -1,0 +1,24 @@
+cd courses/slurm/k8s/base/base/1.kube-basics-lecture/1.11.ns/
+ls -la
+pss
+git status
+git pull
+k create ns dev
+k get ns
+nano deployment.yaml 
+k get all
+k -n dev apply -f .
+k get all
+k get all -A
+k -n dev get all
+k create ns stage
+k -n stage apply -f .
+k -n dev stage get all
+k -n stage scale deployment my-deployment --replicas 5
+k -n stage get po
+k -n dev get po
+k -A get po
+k get po -A
+k get ingress -A
+git status
+save-history 
