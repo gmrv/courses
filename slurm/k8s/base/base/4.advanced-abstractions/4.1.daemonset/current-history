@@ -1,0 +1,21 @@
+cd -
+cd courses/slurm/k8s/base/base/4.advanced-abstractions/4.1.daemonset/
+pss
+ls -la
+nano daemonset.yaml 
+k apply -f daemonset.yaml 
+k get daemonsets.apps 
+sudo -s
+sudo su
+sudo --help
+sudo -U
+sudo -U master
+sudo -U=master
+sudo -Ul=master
+sudo -Ul
+sudo -U -l
+sudo --other-user=master
+sudo --other-user=master -l
+k delete daemonsets.apps node-exporter 
+k get all 
+save-history 
