@@ -1,0 +1,19 @@
+cd courses/slurm/k8s/base/base/4.advanced-abstractions/4.2.statefulset/
+pss
+ls -la
+ls -la rabbitmq-statefulset/
+cd rabbitmq-statefulset/
+nano statefulset.yaml 
+k apply -f .
+nano rolebinding.yaml 
+docker ps
+docker attach 238d554857e8
+docker attach 86
+docker attach 52
+docker attach abb
+docker ps
+kubectl get info
+kubectl cluster-info 
+kubectl kubectl get componentstatuses
+kubectl get componentstatuses
+save-history 
